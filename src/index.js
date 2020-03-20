@@ -1,7 +1,13 @@
-/*
-モジュール方式のJavaScriptについて
-*/
-//import文を使用して sub.js を取り込む
-import { hello } from "./sub";
-//sub.jsに定義されたJavaScriptを実行する
-hello()
+class Test {
+    constructor(name) {
+        this.name = name;
+    }
+
+    logger() {
+        console.log("Hello", this.name);
+    }
+}
+
+let test = new Test('world');
+
+test.logger();
