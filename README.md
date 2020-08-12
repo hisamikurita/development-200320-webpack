@@ -1,6 +1,6 @@
 # development-webpack
 
-・webpack ＋ babel のシンプルな構成
+・webpack ＋ babel のシンプルな構成<br>
 ・canvas2d / webgl 書く用のテンプレート
 
 【Reference】<br>
