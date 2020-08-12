@@ -1,11 +1,11 @@
 module.exports = {
     mode: "production",
     // メインとなるJavaScriptファイル（エントリーポイント）
-    entry: `./src/index.js`,
+    entry: ['@babel/polyfill', './src/main.js'],
     // ファイルの出力設定
     output: {
         //  出力ファイルのディレクトリ名
-        path: `${__dirname}/dist`,
+        path: `${__dirname}/dist/js`,
         // 出力ファイル名
         filename: "bundle.js"
     },
@@ -27,7 +27,15 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(glsl|vs|fs|vert|frag)$/,
+                // exclude: /node_modules/,
+                use: [
+                    'raw-loader',
+                ]
             }
         ]
-    }
+    },
+    devtool: 'inline-source-map'
 };
