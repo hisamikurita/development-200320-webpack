@@ -1,4 +1,4 @@
-# development-200320-webpack
+# development-webpack
 
 ・webpack ＋ babel のシンプルな構成
 
